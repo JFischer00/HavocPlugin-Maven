@@ -1,0 +1,9 @@
+name: TestPlugin
+main: io.github.jfischer00.havocplugin.HavocPlugin
+version: 0.0.1-SNAPSHOT
+commands:
+  havoc:
+    description: Wreak Havoc!
+    usage: /<command>
+    permission: <plugin name>.havoc
+    permission-message: You may not wreak havoc.
