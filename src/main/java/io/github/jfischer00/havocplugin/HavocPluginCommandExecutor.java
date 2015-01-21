@@ -18,8 +18,8 @@ public class HavocPluginCommandExecutor implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (cmd.getName().equalsIgnoreCase("havoc")) {
-			if (args.length != 1) {
-				tellConsole(sender, ChatColor.RED + "You must enter a player's name.");
+			if (args.length != 2) {
+				tellConsole(sender, ChatColor.RED + "Invalid number of arguments.");
 				return false;
 			}
 			
@@ -75,6 +75,7 @@ public class HavocPluginCommandExecutor implements CommandExecutor {
 						}
 						else
 						{
+							tellConsole(sender, ChatColor.RED + args[1] + " is not a type of havoc.");
 							return false;
 						}
 					}

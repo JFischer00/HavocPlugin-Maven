@@ -4,6 +4,6 @@ version: 0.0.1-SNAPSHOT
 commands:
   havoc:
     description: Wreak Havoc!
-    usage: /<command>
+    usage: /<command> <player> <type>
     permission: <plugin name>.havoc
     permission-message: You may not wreak havoc.
