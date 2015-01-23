@@ -1,6 +1,6 @@
-name: TestPlugin
+name: Havoc
 main: io.github.jfischer00.havocplugin.HavocPlugin
-version: 0.0.1-SNAPSHOT
+version: 1.0
 commands:
   havoc:
     description: Wreak Havoc!

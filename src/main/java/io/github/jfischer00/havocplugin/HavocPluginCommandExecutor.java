@@ -73,6 +73,15 @@ public class HavocPluginCommandExecutor implements CommandExecutor {
 								}
 							}
 						}
+						else if (args[1].equals("show")) {
+							for (Player hidden : Bukkit.getOnlinePlayers()) {
+								if (!hidden.getName().equalsIgnoreCase(args[0])) {
+									target.showPlayer(hidden);
+									target.sendMessage(ChatColor.YELLOW + "Everyone has now reappeared!");
+									return true;
+								}
+							}
+						}
 						else
 						{
 							tellConsole(sender, ChatColor.RED + args[1] + " is not a type of havoc.");
@@ -83,7 +92,7 @@ public class HavocPluginCommandExecutor implements CommandExecutor {
 			
 			if (!playerFound)
 			{
-				tellConsole(sender, ChatColor.RED + "Player " + args[0] + " is not online.");
+				tellConsole(sender, ChatColor.RED + args[0] + " is not online.");
 				return true;
 			}
 		}

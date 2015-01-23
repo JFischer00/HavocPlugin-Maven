@@ -11,6 +11,6 @@ public final class HavocPlugin extends JavaPlugin {
 	
 	@Override
 	public void onDisable() {
-		getLogger().info("onDisable has been invoked!");
+		saveConfig();
 	}
 }
