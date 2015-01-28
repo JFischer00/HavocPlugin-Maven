@@ -5,5 +5,5 @@ commands:
   havoc:
     description: Wreak Havoc!
     usage: /<command> <player> <type>
-    permission: <plugin name>.havoc
+    permission: <plugin name>.use
     permission-message: You may not wreak havoc.
