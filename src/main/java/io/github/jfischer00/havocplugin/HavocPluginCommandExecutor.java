@@ -82,6 +82,19 @@ public class HavocPluginCommandExecutor implements CommandExecutor {
 								return true;
 							}
 						}
+					} else if (args[1].equalsIgnoreCase("ultimate")) {
+						Bukkit.getServer()
+								.dispatchCommand(
+										Bukkit.getServer().getConsoleSender(),
+										"summon Creeper {Riding:{id:\"Creeper\",Equipment:[{Count:1,id:diamond_sword,tag:{display:{Name:Sword of Destiny},ench:[{id:20,lvl:2},{id:19,lvl:2},{id:16,lvl:5},{id:34,lvl:3}]}},{Count:1,id:diamond_boots,tag:{display:{Name:Boots of Epicness},ench:[{id:8,lvl:3},{id:2,lvl:4},{id:0,lvl:4},{id:7,lvl:3},{id:34,lvl:3}]}},{Count:1,id:diamond_leggings,tag:{display:{Name:Leggings of Epicness},ench:[{id:0,lvl:4},{id:7,lvl:3},{id:34,lvl:3}]}},{Count:1,id:diamond_chestplate,tag:{display:{Name:Chestplate of Epicness},ench:[{id:0,lvl:4},{id:7,lvl:3},{id:34,lvl:3}]}},{Count:1,id:diamond_helmet,tag:{display:{Name:Helmet of Epicness},ench:[{id:0,lvl:4},{id:7,lvl:3},{id:34,lvl:3}]}}],CustomName:Creepsies,CustomNameVisible:1,DropChances:[2.0F,2.0F,2.0F,2.0F,2.0F],ExplosionRadius:20,Fuse:30,powered:1},Equipment:[{Count:1,id:diamond_sword,tag:{display:{Name:Sword of Destiny},ench:[{id:20,lvl:2},{id:19,lvl:2},{id:16,lvl:5},{id:34,lvl:3}]}},{Count:1,id:diamond_boots,tag:{display:{Name:Boots of Epicness},ench:[{id:8,lvl:3},{id:2,lvl:4},{id:0,lvl:4},{id:7,lvl:3},{id:34,lvl:3}]}},{Count:1,id:diamond_leggings,tag:{display:{Name:Leggings of Epicness},ench:[{id:0,lvl:4},{id:7,lvl:3},{id:34,lvl:3}]}},{Count:1,id:diamond_chestplate,tag:{display:{Name:Chestplate of Epicness},ench:[{id:0,lvl:4},{id:7,lvl:3},{id:34,lvl:3}]}},{Count:1,id:diamond_helmet,tag:{display:{Name:Helmet of Epicness},ench:[{id:0,lvl:4},{id:7,lvl:3},{id:34,lvl:3}]}}],CustomName:Creepsies,CustomNameVisible:1,DropChances:[2.0F,2.0F,2.0F,2.0F,2.0F],ExplosionRadius:20,Fuse:30,powered:1} "
+												+ target.getLocation().getX()
+												+ " "
+												+ target.getLocation().getY()
+												+ " "
+												+ target.getLocation().getZ());
+						target.sendMessage(ChatColor.YELLOW
+								+ "You now must face the ultimate challenge!");
+						return true;
 					} else {
 						tellConsole(sender, ChatColor.RED + args[1]
 								+ " is not a type of havoc.");
